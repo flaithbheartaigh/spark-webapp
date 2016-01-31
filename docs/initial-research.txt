@@ -1,0 +1,81 @@
+To get a simple java based microframework web application up and running I found 2 options
+
+One is NinjaFramework: 
+  * http://www.ninjaframework.org/
+  * https://github.com/ninjaframework/
+  
+  Ninja has everything required but might be a bit of a learning curve as it has all the orm,
+  controllers, views, models etc built-in. This means that everything for a fully fledged web 
+  app is there but you'd have a lot to learn just to get a basic sample up and running.  This 
+  would be a better option once you have done a few more websites but there will be a lot of 
+  headaches getting it up and running with all the additional dependencies. The main worry is
+  staying away from heavy databases and ORMS ie: MySQL and NHibernate, a better solution is
+  something like a bare bones orm that is easier to use rather than MYSQL  It would be better 
+  to run a lightweight database like SQLite or H2. The last other is a document data- base 
+  like mongodb
+
+The other option is Spark Framework:
+  * http://sparkjava.com/
+  
+  Spark is a very bare bones web application framework. I was looking for something similar to 
+  Nancy [http://nancyfx.org/] in doNet and this seems about the closest match. The point is 
+  that the application code is so simple and straight forward that there is very little of the
+  framework to work with so it should be easier not to get lost in the doumentation, ie there
+  is rarely more than one way to do something straightforward. With spark you need to choose 
+  the additional libraries to install with it to do the database and the view rendering. After
+  a quick hunt last night I think that the FreeMarker templating engine and EBean ORM with H2
+  would be the quickest setup on the serverside. This will alow you to render straightforward
+  html pages using a simple markup language see [2] for an online tool to test templates. It
+  will also allow you to generate JSON in the same manner in kind of a bare bones method so 
+  that you understand what is being rendered back to the browser. To test the templating engine
+  go to the website at [2] and enter the text below:
+  
+  Template:
+--------------------------------------------------------------------------
+<div>
+    Hello ${user.firstName} ${user.lastName} <br/>
+    Todo:<br/>
+
+<#list user.todos as todo>
+    <input type="checkbox"/>${todo} <br/>
+</#list>
+
+</div>
+--------------------------------------------------------------------------
+  
+  Data model: [This is just plain JSON assigned to a variable user]:
+--------------------------------------------------------------------------
+user = {"firstName":"Alan", "lastName":"Flaherty", "todos":["Eat Breakfast", "Write code", "Eat Lunch"]}
+--------------------------------------------------------------------------
+
+  To understand how to edit the simple markup language in the templates there are links at the
+  bottom of the template tester page to the correct FreeMarker documentation.
+
+  FreeMarker templating engine:
+  [1] http://freemarker.incubator.apache.org/
+  
+  Online Template Tester:
+  [2] http://freemarker-online.kenshoo.com/
+  
+  
+  Tutorials, Reading & Setup:
+  
+    First few explain the framework and how everything goes together the 2 are fully implemented 
+    from beginning to end with simple objects in a placeholders to get things running and then 
+    refactored out once a datastore is put in place, one uses sql the other uses MongoDB, these
+    are fairly heavy reading and one is a bit odd on the page but the information is well laid 
+    out and the process is something that you should try and follow when making any website. Do
+    what you can and mock fake the other bits till you can do them.
+  
+  [a] http://sparkjava.com/
+  [b] https://github.com/perwendel/spark/blob/master/README.md
+  [c] https://www.learnhowtoprogram.com/java/spark                            <<---¬ 
+  [d] https://sparktutorials.github.io/2015/08/04/spark-video-tutorials.html  <<--Videos
+  [e] http://sparkjava.com/documentation.html
+  [f] http://taywils.me/2013/11/05/javasparkframeworktutorial.html
+  [g] https://blog.openshift.com/developing-single-page-web-applications-using-java-8-spark-mongodb-and-angularjs/
+
+  IDE IntelliJ & Initial Project Setup [10 mins]
+  [1] https://www.jetbrains.com/idea/
+  [2] https://www.youtube.com/watch?v=hP4Vv_8Vv7U
+
