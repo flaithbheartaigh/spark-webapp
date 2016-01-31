@@ -79,3 +79,5 @@ user = {"firstName":"Alan", "lastName":"Flaherty", "todos":["Eat Breakfast", "Wr
   [1] https://www.jetbrains.com/idea/
   [2] https://www.youtube.com/watch?v=hP4Vv_8Vv7U
 
+Addendum: 
+http://www.sql2o.org/ might be best library to use for database connectivity simple Pojo Mapper
