@@ -6,13 +6,13 @@ One is NinjaFramework:
   
   Ninja has everything required but might be a bit of a learning curve as it has all the orm,
   controllers, views, models etc built-in. This means that everything for a fully fledged web 
-  app is there but you'd have a lot to learn just to get a basic sample up and running.  This 
+  app is there, but you'd have a lot to learn just to get a basic sample up and running.  This 
   would be a better option once you have done a few more websites but there will be a lot of 
   headaches getting it up and running with all the additional dependencies. The main worry is
   staying away from heavy databases and ORMS ie: MySQL and NHibernate, a better solution is
-  something like a bare bones orm that is easier to use rather than MYSQL  It would be better 
-  to run a lightweight database like SQLite or H2. The last other is a document data- base 
-  like mongodb
+  something like a bare bones orm that is easier to use rather than NHibernate. It would be 
+  simpler to run a lightweight database like SQLite or H2. The last other is a document data-
+  base like mongodb.
 
 The other option is Spark Framework:
   * http://sparkjava.com/
@@ -60,12 +60,12 @@ user = {"firstName":"Alan", "lastName":"Flaherty", "todos":["Eat Breakfast", "Wr
   
   Tutorials, Reading & Setup:
   
-    First few explain the framework and how everything goes together the 2 are fully implemented 
-    from beginning to end with simple objects in a placeholders to get things running and then 
-    refactored out once a datastore is put in place, one uses sql the other uses MongoDB, these
-    are fairly heavy reading and one is a bit odd on the page but the information is well laid 
-    out and the process is something that you should try and follow when making any website. Do
-    what you can and mock fake the other bits till you can do them.
+    The First few explain the framework and how everything goes together the 2 are fully 
+    implemented from beginning to end with simple objects in a placeholders to get things 
+    running and then refactored out once a datastore is put in place, one uses sql the other 
+    uses MongoDB, these are fairly heavy reading and one is a bit odd on the page but the 
+    information is well laid out and the process is something that you should try and follow
+    when making any website. Do what you can and mock fake the other bits till you can do them.
   
   [a] http://sparkjava.com/
   [b] https://github.com/perwendel/spark/blob/master/README.md
